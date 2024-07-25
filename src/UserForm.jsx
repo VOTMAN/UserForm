@@ -16,10 +16,9 @@ const UserForm = () => {
         e.preventDefault();
         if (user.name == "" || user.email == "") return;
 
-        axios
-            .post("http://localhost:5000/form", user)
-            .then((result) => console.log(result))
-            .catch((err) => console.log(err));
+        axios.post("http://localhost:5000/form", user);
+        // .then((result) => console.log(result))
+        // .catch((err) => console.log(err));
 
         setSubmit(1);
         // setTimeout(() => {
